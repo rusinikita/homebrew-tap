@@ -5,21 +5,21 @@
 class Devex < Formula
   desc "Git codebase visualization. Development experience insights."
   homepage "https://github.com/rusinikita/devex"
-  version "0.1.3"
+  version "0.1.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rusinikita/devex/releases/download/v0.1.3/devex_Darwin_arm64.tar.gz"
-      sha256 "2ec28923590f5f225152d271a0461baa1691c6e6bec3a7e99a346d612ae0bd9c"
+      url "https://github.com/rusinikita/devex/releases/download/v0.1.4/devex_Darwin_arm64.tar.gz"
+      sha256 "f9237eb5f77c9883da039a045c61b0f9a6c1881b4e05b65424a492b5498e0799"
 
       def install
         bin.install "devex"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rusinikita/devex/releases/download/v0.1.3/devex_Darwin_x86_64.tar.gz"
-      sha256 "36e5c355456894cacd56597c81e5b226f8abc61fde64b5a2470065bd7b64a51e"
+      url "https://github.com/rusinikita/devex/releases/download/v0.1.4/devex_Darwin_x86_64.tar.gz"
+      sha256 "2cb24e76eb973bd97d972f55fb9b2eaf6ca9d92c652cbe6b312f802e67ea85ac"
 
       def install
         bin.install "devex"
@@ -29,16 +29,16 @@ class Devex < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rusinikita/devex/releases/download/v0.1.3/devex_Linux_arm64.tar.gz"
-      sha256 "3c526265e84889ae3a0010ad4cd6322c6df7efd66a19949059972d1c9c05efa1"
+      url "https://github.com/rusinikita/devex/releases/download/v0.1.4/devex_Linux_arm64.tar.gz"
+      sha256 "29308dd698c0a288fa887870068cff446ef37da7b7c433257c2b45cb97edeb21"
 
       def install
         bin.install "devex"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rusinikita/devex/releases/download/v0.1.3/devex_Linux_x86_64.tar.gz"
-      sha256 "fe6fd111bf6ac9f36c29b6b1f51a8dbeec23c460cf339dbc16a79f96fe86df6b"
+      url "https://github.com/rusinikita/devex/releases/download/v0.1.4/devex_Linux_x86_64.tar.gz"
+      sha256 "d3f1f635fd8197dd03a04c380fe91b13c64557a012f346be59524fd0190da2be"
 
       def install
         bin.install "devex"
