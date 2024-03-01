@@ -5,21 +5,21 @@
 class Changes < Formula
   desc "Helps to automate code review and enforce team agreements."
   homepage "https://github.com/rusinikita/changes"
-  version "0.3.0"
+  version "0.3.1"
   license "GPL-3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rusinikita/changes/releases/download/v0.3.0/changes_Darwin_x86_64.tar.gz"
-      sha256 "e5e6137f55d96e8782050f22478b2b65c8797600469be3efc5907258f3339215"
+      url "https://github.com/rusinikita/changes/releases/download/v0.3.1/changes_darwin_x86_64.tar.gz"
+      sha256 "e4c5aafd42cc2f07815240035186fa5d1625bac56f3007b6017b738565a13e4c"
 
       def install
         bin.install "changes"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rusinikita/changes/releases/download/v0.3.0/changes_Darwin_arm64.tar.gz"
-      sha256 "a28a8bc7a93cc5289414c997799bddc45b5e7bbc76ae4206ad384a5e593417cc"
+      url "https://github.com/rusinikita/changes/releases/download/v0.3.1/changes_darwin_arm64.tar.gz"
+      sha256 "36d97a6aaed1d745a820f8528dbb83c0072e01c215d90290f6766a39d8959c1e"
 
       def install
         bin.install "changes"
@@ -28,17 +28,17 @@ class Changes < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/rusinikita/changes/releases/download/v0.3.0/changes_Linux_x86_64.tar.gz"
-      sha256 "d62e0321c2d1ce6e62a415e4d584d190f63b247287baa361b50960df7127d40f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rusinikita/changes/releases/download/v0.3.1/changes_linux_arm64.tar.gz"
+      sha256 "3b340ac46d5ffc927b7ed003b9534fde3c3ed32311983d845cf209a440b0b49a"
 
       def install
         bin.install "changes"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rusinikita/changes/releases/download/v0.3.0/changes_Linux_arm64.tar.gz"
-      sha256 "59ef924f95b289469651a08fee6660bdb487fc49761101e99a883113dde96424"
+    if Hardware::CPU.intel?
+      url "https://github.com/rusinikita/changes/releases/download/v0.3.1/changes_linux_x86_64.tar.gz"
+      sha256 "674fb2ba12e139cdf0dccbd372791684437c1bd1d2651ffc1a8d39e20c43932d"
 
       def install
         bin.install "changes"
