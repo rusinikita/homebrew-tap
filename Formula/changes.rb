@@ -5,21 +5,21 @@
 class Changes < Formula
   desc "Helps to automate code review and enforce team agreements."
   homepage "https://github.com/rusinikita/changes"
-  version "0.3.1"
+  version "0.3.2"
   license "GPL-3.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/rusinikita/changes/releases/download/v0.3.1/changes_darwin_x86_64.tar.gz"
-      sha256 "e4c5aafd42cc2f07815240035186fa5d1625bac56f3007b6017b738565a13e4c"
+    if Hardware::CPU.arm?
+      url "https://github.com/rusinikita/changes/releases/download/v0.3.2/changes-0.3.2-darwin-arm64.tar.gz"
+      sha256 "915078d9a34cb477478839a6c395b555c86a33bae2d35d4e5ecb023d5a41e663"
 
       def install
         bin.install "changes"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/rusinikita/changes/releases/download/v0.3.1/changes_darwin_arm64.tar.gz"
-      sha256 "36d97a6aaed1d745a820f8528dbb83c0072e01c215d90290f6766a39d8959c1e"
+    if Hardware::CPU.intel?
+      url "https://github.com/rusinikita/changes/releases/download/v0.3.2/changes-0.3.2-darwin-amd64.tar.gz"
+      sha256 "4055ee8ab23b4e8887ad46f78f88b62fc1b7150683efb2f6fb85ce6a66c89f1e"
 
       def install
         bin.install "changes"
@@ -28,17 +28,17 @@ class Changes < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rusinikita/changes/releases/download/v0.3.1/changes_linux_arm64.tar.gz"
-      sha256 "3b340ac46d5ffc927b7ed003b9534fde3c3ed32311983d845cf209a440b0b49a"
+    if Hardware::CPU.intel?
+      url "https://github.com/rusinikita/changes/releases/download/v0.3.2/changes-0.3.2-linux-amd64.tar.gz"
+      sha256 "aadca3625fbf0a0af10b4dc89e55632be790b559dc1eb0a3b23130352dfc280b"
 
       def install
         bin.install "changes"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/rusinikita/changes/releases/download/v0.3.1/changes_linux_x86_64.tar.gz"
-      sha256 "674fb2ba12e139cdf0dccbd372791684437c1bd1d2651ffc1a8d39e20c43932d"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rusinikita/changes/releases/download/v0.3.2/changes-0.3.2-linux-arm64.tar.gz"
+      sha256 "05f6a9efa5b46477985fdb6a875875bf648aca95356cdefaac2ab623388891dd"
 
       def install
         bin.install "changes"
