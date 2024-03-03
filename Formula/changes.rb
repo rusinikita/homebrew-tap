@@ -5,21 +5,21 @@
 class Changes < Formula
   desc "Helps to automate code review and enforce team agreements."
   homepage "https://github.com/rusinikita/changes"
-  version "0.3.2"
+  version "1.0.0"
   license "GPL-3.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/rusinikita/changes/releases/download/v0.3.2/changes-0.3.2-darwin-arm64.tar.gz"
-      sha256 "915078d9a34cb477478839a6c395b555c86a33bae2d35d4e5ecb023d5a41e663"
+      url "https://github.com/rusinikita/changes/releases/download/v1.0.0/changes-1.0.0-darwin-arm64.tar.gz"
+      sha256 "0a571f279b58c5c66ceee2dbcd03fb601925075b91bc9a3a8b014d28da08e96b"
 
       def install
         bin.install "changes"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/rusinikita/changes/releases/download/v0.3.2/changes-0.3.2-darwin-amd64.tar.gz"
-      sha256 "4055ee8ab23b4e8887ad46f78f88b62fc1b7150683efb2f6fb85ce6a66c89f1e"
+      url "https://github.com/rusinikita/changes/releases/download/v1.0.0/changes-1.0.0-darwin-amd64.tar.gz"
+      sha256 "0d1f4b382397a33e39205173844e2eaaa76cb93ac4b7f13f69f81ba46a78d194"
 
       def install
         bin.install "changes"
@@ -28,17 +28,17 @@ class Changes < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/rusinikita/changes/releases/download/v0.3.2/changes-0.3.2-linux-amd64.tar.gz"
-      sha256 "aadca3625fbf0a0af10b4dc89e55632be790b559dc1eb0a3b23130352dfc280b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/rusinikita/changes/releases/download/v1.0.0/changes-1.0.0-linux-arm64.tar.gz"
+      sha256 "0242c29d3c5f8b4d40c16db0db8975077e0119a3bc6f31f08d8dafe65a599f75"
 
       def install
         bin.install "changes"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rusinikita/changes/releases/download/v0.3.2/changes-0.3.2-linux-arm64.tar.gz"
-      sha256 "05f6a9efa5b46477985fdb6a875875bf648aca95356cdefaac2ab623388891dd"
+    if Hardware::CPU.intel?
+      url "https://github.com/rusinikita/changes/releases/download/v1.0.0/changes-1.0.0-linux-amd64.tar.gz"
+      sha256 "e039b434250feb3881f012afdc91e6f117db2a3c18a12c71b515019572876393"
 
       def install
         bin.install "changes"
