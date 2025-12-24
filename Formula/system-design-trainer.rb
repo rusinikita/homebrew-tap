@@ -5,21 +5,21 @@
 class SystemDesignTrainer < Formula
   desc "Interactive Go-based training platform for system design and high-load engineering challenges"
   homepage "https://github.com/rusinikita/system-design-trainer"
-  version "0.4.1"
+  version "0.4.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rusinikita/system-design-trainer/releases/download/v0.4.1/system-design-trainer_Darwin_x86_64.tar.gz"
-      sha256 "1be64140975ced45388a9307ef4d44a9326bfa107f6ad058993ebb46af747f68"
+      url "https://github.com/rusinikita/system-design-trainer/releases/download/v0.4.3/system-design-trainer-0.4.3-darwin-amd64.tar.gz"
+      sha256 "997801078dd8d8530cd73f5b2c85ce33a12c607af15192eb8e54b72d3da65e0e"
 
       def install
         bin.install "sdt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rusinikita/system-design-trainer/releases/download/v0.4.1/system-design-trainer_Darwin_arm64.tar.gz"
-      sha256 "52ea493b46b9f2a4ce3f86dec6016a5f3d7995cfb5d63479de2714a1f0938e83"
+      url "https://github.com/rusinikita/system-design-trainer/releases/download/v0.4.3/system-design-trainer-0.4.3-darwin-arm64.tar.gz"
+      sha256 "960df6fc39ec4c6cd7f21960fc2f793c5d34e5dd44dd60935cbf8edaf8ff9227"
 
       def install
         bin.install "sdt"
@@ -29,15 +29,15 @@ class SystemDesignTrainer < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rusinikita/system-design-trainer/releases/download/v0.4.1/system-design-trainer_Linux_x86_64.tar.gz"
-      sha256 "df86b4e63868d3dbddd553112629fbc94fdb0ab6d553633da7e74cfd640f180a"
+      url "https://github.com/rusinikita/system-design-trainer/releases/download/v0.4.3/system-design-trainer-0.4.3-linux-amd64.tar.gz"
+      sha256 "b595c4273eda72abde884b91420d33d18e25f5429dd1203e74acc6c64f3e26eb"
       def install
         bin.install "sdt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rusinikita/system-design-trainer/releases/download/v0.4.1/system-design-trainer_Linux_arm64.tar.gz"
-      sha256 "9cadf968422e39c5d15729ede47f5fd99601607faa21526b7303431e6d5f8fa8"
+      url "https://github.com/rusinikita/system-design-trainer/releases/download/v0.4.3/system-design-trainer-0.4.3-linux-arm64.tar.gz"
+      sha256 "974fc389290a9240529d69d6a207b1eb5433ccaf9d96876a47de36d197e47346"
       def install
         bin.install "sdt"
       end
